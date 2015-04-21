@@ -13,6 +13,15 @@
       buildConfiguration = "Debug">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "5AB7C7E01AE61D2300A1391B"
+            BuildableName = "Basic Instagram Clone.app"
+            BlueprintName = "Basic Instagram Clone"
+            ReferencedContainer = "container:Basic Instagram Clone.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -23,6 +32,16 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "5AB7C7E01AE61D2300A1391B"
+            BuildableName = "Basic Instagram Clone.app"
+            BlueprintName = "Basic Instagram Clone"
+            ReferencedContainer = "container:Basic Instagram Clone.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -32,6 +51,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "5AB7C7E01AE61D2300A1391B"
+            BuildableName = "Basic Instagram Clone.app"
+            BlueprintName = "Basic Instagram Clone"
+            ReferencedContainer = "container:Basic Instagram Clone.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

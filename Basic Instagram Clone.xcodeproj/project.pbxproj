@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A4B57FF1AE6A9D9009B1AF9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B57FE1AE6A9D9009B1AF9 /* ProfileViewController.swift */; };
+		5A4B58011AE6AAC1009B1AF9 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B58001AE6AAC1009B1AF9 /* PostViewController.swift */; };
+		5A4B58031AE6B2B8009B1AF9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B58021AE6B2B8009B1AF9 /* LoginViewController.swift */; };
 		5AB7C7E71AE61D2400A1391B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB7C7E61AE61D2400A1391B /* AppDelegate.swift */; };
-		5AB7C7E91AE61D2400A1391B /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB7C7E81AE61D2400A1391B /* FirstViewController.swift */; };
-		5AB7C7EB1AE61D2400A1391B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB7C7EA1AE61D2400A1391B /* SecondViewController.swift */; };
+		5AB7C7E91AE61D2400A1391B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB7C7E81AE61D2400A1391B /* HomeViewController.swift */; };
+		5AB7C7EB1AE61D2400A1391B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB7C7EA1AE61D2400A1391B /* SearchViewController.swift */; };
 		5AB7C7EE1AE61D2400A1391B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AB7C7EC1AE61D2400A1391B /* Main.storyboard */; };
 		5AB7C7F01AE61D2400A1391B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AB7C7EF1AE61D2400A1391B /* Images.xcassets */; };
 		5AB7C7F31AE61D2400A1391B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AB7C7F11AE61D2400A1391B /* LaunchScreen.xib */; };
@@ -27,11 +30,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A4B57FE1AE6A9D9009B1AF9 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		5A4B58001AE6AAC1009B1AF9 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		5A4B58021AE6B2B8009B1AF9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5AB7C7E11AE61D2300A1391B /* Basic Instagram Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basic Instagram Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AB7C7E51AE61D2400A1391B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AB7C7E61AE61D2400A1391B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5AB7C7E81AE61D2400A1391B /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		5AB7C7EA1AE61D2400A1391B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		5AB7C7E81AE61D2400A1391B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5AB7C7EA1AE61D2400A1391B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		5AB7C7ED1AE61D2400A1391B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5AB7C7EF1AE61D2400A1391B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5AB7C7F21AE61D2400A1391B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -80,9 +86,12 @@
 			isa = PBXGroup;
 			children = (
 				5AB7C7E61AE61D2400A1391B /* AppDelegate.swift */,
-				5AB7C7E81AE61D2400A1391B /* FirstViewController.swift */,
-				5AB7C7EA1AE61D2400A1391B /* SecondViewController.swift */,
+				5AB7C7E81AE61D2400A1391B /* HomeViewController.swift */,
+				5AB7C7EA1AE61D2400A1391B /* SearchViewController.swift */,
 				5AB7C7EC1AE61D2400A1391B /* Main.storyboard */,
+				5A4B58021AE6B2B8009B1AF9 /* LoginViewController.swift */,
+				5A4B58001AE6AAC1009B1AF9 /* PostViewController.swift */,
+				5A4B57FE1AE6A9D9009B1AF9 /* ProfileViewController.swift */,
 				5AB7C7EF1AE61D2400A1391B /* Images.xcassets */,
 				5AB7C7F11AE61D2400A1391B /* LaunchScreen.xib */,
 				5AB7C7E41AE61D2400A1391B /* Supporting Files */,
@@ -215,9 +224,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AB7C7EB1AE61D2400A1391B /* SecondViewController.swift in Sources */,
+				5A4B58031AE6B2B8009B1AF9 /* LoginViewController.swift in Sources */,
+				5AB7C7EB1AE61D2400A1391B /* SearchViewController.swift in Sources */,
 				5AB7C7E71AE61D2400A1391B /* AppDelegate.swift in Sources */,
-				5AB7C7E91AE61D2400A1391B /* FirstViewController.swift in Sources */,
+				5A4B57FF1AE6A9D9009B1AF9 /* ProfileViewController.swift in Sources */,
+				5AB7C7E91AE61D2400A1391B /* HomeViewController.swift in Sources */,
+				5A4B58011AE6AAC1009B1AF9 /* PostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +425,7 @@
 				5AB7C8041AE61D2400A1391B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5AB7C8051AE61D2400A1391B /* Build configuration list for PBXNativeTarget "Basic Instagram CloneTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +434,7 @@
 				5AB7C8071AE61D2400A1391B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
