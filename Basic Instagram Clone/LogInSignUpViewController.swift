@@ -24,12 +24,14 @@ class LogInSignUpViewController: UIViewController {
     }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        //Hide keyboard
         self.view.endEditing(true)
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
+        //Add observers when keyboard appears and disappears
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
     }
@@ -37,10 +39,13 @@ class LogInSignUpViewController: UIViewController {
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        //Remove observers
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIKeyboardWillHideNotification, object: nil)
     }
     
     func keyboardWillShow(notification: NSNotification) {
+        //Get keyboard's height and move view up
         if let userInfo = notification.userInfo {
             if let keyboardSize =  (userInfo[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
                 kbHeight = keyboardSize.height
@@ -50,12 +55,13 @@ class LogInSignUpViewController: UIViewController {
     }
     
     func keyboardWillHide(notification: NSNotification) {
+        //Move view down
         self.animateTextField(false)
     }
     
     func animateTextField(up: Bool) {
-        var movement = (up ? -kbHeight : kbHeight)
-        
+        //Move view up or down
+        let movement = (up ? -kbHeight : kbHeight)
         UIView.animateWithDuration(0.3, animations: {
             self.view.frame = CGRectOffset(self.view.frame, 0, movement)
         })

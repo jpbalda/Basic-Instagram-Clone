@@ -18,21 +18,25 @@ class NewUserViewController: UIViewController, UITextFieldDelegate {
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
     @IBAction func signUpTouched(sender: AnyObject) {
+        //Remove white spaces
         let username = usernameText.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         let password = passwordText.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         let email = emailText.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         
+        //Validate fields
         if username != "" && password != "" && email != "" {
-            //Create the activity indicator (spinner)
+            //Show activity indicator (spinner)
             activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
             activityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
             activityIndicator.center = self.view.center
             activityIndicator.hidesWhenStopped = true
             activityIndicator.startAnimating()
             self.view.addSubview(activityIndicator)
+            
             //Ignore all user interactions
             UIApplication.sharedApplication().beginIgnoringInteractionEvents()
             
+            //Sign up user
             var user = PFUser()
             user.username = username
             user.password = password
@@ -42,12 +46,16 @@ class NewUserViewController: UIViewController, UITextFieldDelegate {
                 (succeeded: Bool, error: NSError?) -> Void in
                 //Hide activity indicator (spinner)
                 self.activityIndicator.stopAnimating()
+                
                 //Start accepting user interactions
                 UIApplication.sharedApplication().endIgnoringInteractionEvents()
                 
                 if error == nil {
                     // Hooray! Let them use the app now.
+                    
                     self.displayAlert("Sign Up Successful", message: "Please check your email inbox to verify you email address, then try to log in")
+                    
+                    //Go back to Existing User view
                     self.tabBarController?.selectedIndex = 0
                 } else {
                     //let errorString = error.userInfo["error"] as NSString
@@ -76,6 +84,7 @@ class NewUserViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
+        //Hide keyboard
         textField.resignFirstResponder()
         return true
     }

@@ -1,25 +1,28 @@
 //
-//  ProfileViewController.swift
+//  UserImageViewController.swift
 //  Basic Instagram Clone
 //
-//  Created by Juan Pablo Balda Andrade on 4/21/15.
+//  Created by Juan Pablo Balda Andrade on 4/28/15.
 //  Copyright (c) 2015 JPBA. All rights reserved.
 //
 
 import UIKit
-import Parse
 
-class ProfileViewController: UIViewController {
-
-    @IBAction func logOutTapped(sender: AnyObject) {
-        PFUser.logOut()
-        self.performSegueWithIdentifier("logOutSegue", sender: self)
-    }
+class UserPostViewController: UIViewController {
     
+    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var commentTextView: UITextView!
+    
+    var selectedImage = UIImage()
+    var postComment = String()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        //Set post image and comment
+        userImage.image = selectedImage
+        commentTextView.text = postComment
     }
 
     override func didReceiveMemoryWarning() {

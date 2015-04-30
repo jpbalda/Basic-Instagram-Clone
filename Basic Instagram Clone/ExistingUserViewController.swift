@@ -18,31 +18,39 @@ class ExistingUserViewController: UIViewController, UITextFieldDelegate {
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
 
     @IBAction func LogInTapped(sender: AnyObject) {
+        //Remove white spaces
         let user = usernameText.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         let pass = passwordText.text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         
+        //Validate fields
         if user != "" && pass != "" {
-            //Create the activity indicator (spinner)
+            //Show activity indicator (spinner)
             activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
             activityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
             activityIndicator.center = self.view.center
             activityIndicator.hidesWhenStopped = true
             activityIndicator.startAnimating()
             self.view.addSubview(activityIndicator)
+            
             //Ignore all user interactions
             UIApplication.sharedApplication().beginIgnoringInteractionEvents()
             
+            //Log user in
             PFUser.logInWithUsernameInBackground(user, password:pass) {
                 (user: PFUser?, error: NSError?) -> Void in
                 //Hide activity indicator (spinner)
                 self.activityIndicator.stopAnimating()
+                
                 //Start accepting user interactions
                 UIApplication.sharedApplication().endIgnoringInteractionEvents()
                 
                 if user != nil {
                     // Do stuff after successful login.
+                    
+                    //Check if email is verified
                     if user!.objectForKey("emailVerified")! as! Bool == true {
-                        self.performSegueWithIdentifier("userLoggedInSegue", sender: self)
+                        //Segue to Home
+                        self.performSegueWithIdentifier("logInSegue", sender: self)
                     } else {
                         self.displayAlert("Couldn't log in", message: "Please verify your email address first")
                     }
@@ -73,13 +81,15 @@ class ExistingUserViewController: UIViewController, UITextFieldDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+        //Go directly to Home if user is already logged in
         if PFUser.currentUser() != nil {
-            self.performSegueWithIdentifier("userLoggedInSegue", sender: self)
+            self.performSegueWithIdentifier("logInSegue", sender: self)
         }
 
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
+        //Hide keyboard
         textField.resignFirstResponder()
         return true
     }
