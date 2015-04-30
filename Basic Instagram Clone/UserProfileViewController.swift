@@ -16,16 +16,32 @@ class UserProfileViewController: UIViewController, UICollectionViewDelegate, UIC
     @IBOutlet weak var followersLabel: UILabel!
     @IBOutlet weak var followingLabel: UILabel!
     @IBOutlet weak var postsColletion: UICollectionView!
+    @IBOutlet weak var logOutButton: UIBarButtonItem!
     
     var searchResult = [PFUser]()
     var selectedIndex = -1
     var userPosts = [PFObject]()
     var userImages = [Int: UIImage]()
     
+    @IBAction func logOutTapped(sender: AnyObject) {
+        PFUser.logOut()
+        self.performSegueWithIdentifier("logOutSegue", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        //Check if it's coming from Search or from current user Profile
+        if selectedIndex == -1 {
+            searchResult.append(PFUser.currentUser()!)
+            selectedIndex = 0
+            logOutButton.title = "Log Out"
+            logOutButton.enabled = true
+        } else {
+            logOutButton.title = ""
+            logOutButton.enabled = false
+        }
         //Set navigation title
         self.navigationItem.title = searchResult[selectedIndex].username
         

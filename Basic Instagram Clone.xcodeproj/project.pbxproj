@@ -11,7 +11,6 @@
 		5A24B7E21AEC1A0300BCD3AC /* person-4x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A24B7E11AEC1A0300BCD3AC /* person-4x.png */; };
 		5A24B7E41AEC1A1900BCD3AC /* magnifying-glass-4x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A24B7E31AEC1A1900BCD3AC /* magnifying-glass-4x.png */; };
 		5A33B8551AEF18FE00B25699 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A33B8541AEF18FE00B25699 /* UserProfileViewController.swift */; };
-		5A4B57FF1AE6A9D9009B1AF9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B57FE1AE6A9D9009B1AF9 /* ProfileViewController.swift */; };
 		5A4B58011AE6AAC1009B1AF9 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B58001AE6AAC1009B1AF9 /* PostViewController.swift */; };
 		5A4B58031AE6B2B8009B1AF9 /* ExistingUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B58021AE6B2B8009B1AF9 /* ExistingUserViewController.swift */; };
 		5A5B98201AE76E0500289D1D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A5B981E1AE76E0500289D1D /* Parse.framework */; };
@@ -58,7 +57,6 @@
 		5A24B7E11AEC1A0300BCD3AC /* person-4x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "person-4x.png"; sourceTree = "<group>"; };
 		5A24B7E31AEC1A1900BCD3AC /* magnifying-glass-4x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "magnifying-glass-4x.png"; sourceTree = "<group>"; };
 		5A33B8541AEF18FE00B25699 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
-		5A4B57FE1AE6A9D9009B1AF9 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5A4B58001AE6AAC1009B1AF9 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		5A4B58021AE6B2B8009B1AF9 /* ExistingUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExistingUserViewController.swift; sourceTree = "<group>"; };
 		5A5B981E1AE76E0500289D1D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -189,7 +187,6 @@
 				5AB7C7EC1AE61D2400A1391B /* Main.storyboard */,
 				5A5BA1E11AE8AE5C001B8FA1 /* NewUserViewController.swift */,
 				5A4B58001AE6AAC1009B1AF9 /* PostViewController.swift */,
-				5A4B57FE1AE6A9D9009B1AF9 /* ProfileViewController.swift */,
 				5ABEF7A61AEDEA9A00135B13 /* SearchTableViewCell.swift */,
 				5AB7C7EA1AE61D2400A1391B /* SearchViewController.swift */,
 				5AB7C7E41AE61D2400A1391B /* Supporting Files */,
@@ -337,7 +334,6 @@
 				5ABEF7A71AEDEA9A00135B13 /* SearchTableViewCell.swift in Sources */,
 				5AB5A5A51AEFF5A100682A8F /* UserPostViewController.swift in Sources */,
 				5AB7C7E71AE61D2400A1391B /* AppDelegate.swift in Sources */,
-				5A4B57FF1AE6A9D9009B1AF9 /* ProfileViewController.swift in Sources */,
 				5AB5A5A31AEFDCB000682A8F /* UserProfileCollectionViewCell.swift in Sources */,
 				5AB7C7E91AE61D2400A1391B /* HomeViewController.swift in Sources */,
 				5A5BA1E21AE8AE5C001B8FA1 /* NewUserViewController.swift in Sources */,
